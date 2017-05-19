@@ -65,7 +65,8 @@ class time_heap
   			array[i] = NULL;
   		}
 
-  		if(cur_size ！= 0)
+
+  		if(cur_size != 0)
   		{
   			for(int i=0;i<cur_size;i++)
   			{
@@ -96,7 +97,7 @@ class time_heap
     {
       if(!timer)
         return ;
-      if(cur_size > = capacity)
+      if(cur_size >= capacity)
       {
         resize();
       }
@@ -186,11 +187,11 @@ class time_heap
   				child++;
   			if(array[child]->expire < temp->expire)
   			{
-  				array[hole] = a[child];
+  				array[hole] = array[child];
   			}
 
   		}
-  		a[hole] = temp;
+  		array[hole] = temp;
   	}
       void resize()
       {

@@ -24,9 +24,9 @@ protected:
 	Singleton(void){}
 	~Singleton(void){}
 	static T* m_instance;
-}
+};
 
-template<class T> 
-T* Singleton<T>::m_instance =  NULL;
 
+#define DECLARE_SINGLETON_MEMBER(_Ty)   \
+    template <> _Ty* Singleton<_Ty>::m_instance = NULL;
 #endif

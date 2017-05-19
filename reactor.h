@@ -13,10 +13,10 @@
 typedef unsigned int event_t;
 enum
 {
-	kReadEvent = 0x01;
-	kWriteEvent = 0x02;
-	kErrorEvent = 0x03;
-	kEventMask = 0xff;
+	kReadEvent = 0x01,
+	kWriteEvent = 0x02,
+	kErrorEvent = 0x03,
+	kEventMask = 0xff
 };
 
 typedef int handle_t;
@@ -26,7 +26,7 @@ class EventHandler
 	public:
 		virtual handle_t GetHandle() const  = 0;
 		virtual void HandleRead() {}
-		virtual void HadleWrite() {}
+		virtual void HandleWrite() {}
 		virtual void HandleError() {}
 	protected:
 		EventHandler() {}
